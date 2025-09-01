@@ -7,6 +7,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent {
+  formError = '';
+
   userForm = new FormGroup({
     fname: new FormControl('', [Validators.required, Validators.maxLength(50)]),
     lname: new FormControl('', [Validators.required, Validators.maxLength(50)]),
@@ -18,7 +20,15 @@ export class UserDetailsComponent {
   })
 
   onSubmit() {
-    console.log(this.userForm.value)
+    if (this.userForm.status === "INVALID") {
+      this.formError = "Please Fill Appropriate Fields"
+    }
+    else {
+      console.log(this.userForm.value)
+      this.formError = ""
+    }
+
+
   }
 
 }

@@ -50,3 +50,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
+
+input.ng-touched.ng-invalid {
+  border: solid 1px red;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 2px;
+}

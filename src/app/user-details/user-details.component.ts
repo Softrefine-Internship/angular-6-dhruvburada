@@ -33,4 +33,8 @@ export class UserDetailsComponent {
 
   }
 
+  resetForm() {
+    this.userForm.reset({ gender: 'male' })
+  }
+
 }

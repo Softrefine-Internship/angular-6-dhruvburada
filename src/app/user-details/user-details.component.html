@@ -7,7 +7,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.fname.touched &&
+        (userForm.controls.fname.touched || isSubmitted) &&
         userForm.controls.fname.hasError('required')
       "
     >
@@ -16,7 +16,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.fname.touched &&
+        (userForm.controls.fname.touched || isSubmitted) &&
         userForm.controls.fname.hasError('maxlength')
       "
     >
@@ -29,7 +29,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.lname.touched &&
+        (userForm.controls.lname.touched || isSubmitted) &&
         userForm.controls.lname.hasError('required')
       "
     >
@@ -38,7 +38,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.lname.touched &&
+        (userForm.controls.lname.touched || isSubmitted) &&
         userForm.controls.lname.hasError('maxlength')
       "
     >
@@ -51,7 +51,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.mail.touched &&
+        (userForm.controls.mail.touched || isSubmitted) &&
         userForm.controls.mail.hasError('required')
       "
     >
@@ -60,7 +60,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.mail.touched &&
+        (userForm.controls.mail.touched || isSubmitted) &&
         userForm.controls.mail.hasError('maxlength')
       "
     >
@@ -69,7 +69,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.mail.touched &&
+        (userForm.controls.mail.touched || isSubmitted) &&
         userForm.controls.mail.hasError('email')
       "
     >
@@ -119,7 +119,7 @@
     <p
       class="error-msg"
       *ngIf="
-        userForm.controls.country.touched &&
+        (userForm.controls.country.touched || isSubmitted) &&
         userForm.controls.country.hasError('required')
       "
     >

@@ -59,3 +59,11 @@ input.ng-touched.ng-invalid {
   color: red;
   margin-top: 2px;
 }
+
+.ng-submitted input.ng-invalid {
+  border: solid 1px red;
+}
+
+.ng-submitted select.ng-invalid {
+  border: solid 1px red;
+}
